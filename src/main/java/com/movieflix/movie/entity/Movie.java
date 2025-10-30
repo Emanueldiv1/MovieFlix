@@ -50,7 +50,7 @@ public class Movie {
     @ManyToMany
     @JoinTable(name = "movie_streaming",
             joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "category_id")
+            inverseJoinColumns = @JoinColumn(name = "streaming_id")
     )
 
     private List<Streaming> streamings;
