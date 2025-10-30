@@ -1,8 +1,8 @@
 package com.movieflix.category.controller;
 
 
-import com.movieflix.category.controller.request.CategoryRequest;
-import com.movieflix.category.controller.response.CategoryResponse;
+import com.movieflix.category.controller.dtos.request.CategoryRequest;
+import com.movieflix.category.controller.dtos.response.CategoryResponse;
 import com.movieflix.category.entity.Category;
 import com.movieflix.category.mapper.CategoryMapper;
 import com.movieflix.category.service.CategoryService;

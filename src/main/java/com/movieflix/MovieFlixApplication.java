@@ -1,5 +1,6 @@
 package com.movieflix;
 
+import com.movieflix.streaming.entity.Streaming;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
