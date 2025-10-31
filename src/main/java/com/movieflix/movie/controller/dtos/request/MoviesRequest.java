@@ -13,5 +13,4 @@ public record MoviesRequest(String title,
                             Double rating,
                             List<Long> categories,
                             List<Long> streaming){
-
 }
