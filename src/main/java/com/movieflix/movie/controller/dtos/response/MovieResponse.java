@@ -5,6 +5,7 @@ import com.movieflix.category.entity.Category;
 import com.movieflix.streaming.controller.dtos.response.StreamingResponse;
 import lombok.Builder;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 public record MovieResponse(Long id,
                             String title,
                             String description,
-                            LocalDateTime releaseDate,
+                            LocalDate releaseDate,
                             Double rating,
                             List<CategoryResponse> category,
                             List<StreamingResponse> streaming){
