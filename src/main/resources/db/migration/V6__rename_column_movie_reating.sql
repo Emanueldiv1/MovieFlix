@@ -1,0 +1,2 @@
+ALTER TABLE MOVIE
+RENAME COLUMN reating TO rating;
