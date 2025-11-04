@@ -41,7 +41,8 @@ public class CategoryController {
     @GetMapping("/{id}")
     public ResponseEntity<CategoryResponse> categoryId(@PathVariable Long id) {
         return categoryService.categoryID(id)
-                .map(category -> ResponseEntity.ok(CategoryMapper.toCategoryResponse(category)))
+                .map(category -> ResponseEntity.ok(
+                        CategoryMapper.toCategoryResponse(category)))
                 .orElse(ResponseEntity.notFound().build());
     }
 
@@ -50,6 +51,5 @@ public class CategoryController {
         categoryService.deleteBycategory(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-
 
 }
