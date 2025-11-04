@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -27,15 +28,15 @@ public class Movie {
 
     private String description;
 
-    @Column(name = "realease_date")
-    private LocalDateTime releaseDate;
+    @Column(name = "release_date")
+    private LocalDate releaseDate;
 
     @CreationTimestamp // preenchimento automatico
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
     @UpdateTimestamp // preenchimento automatico
-    @Column(name = "update_at")
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
     private Double rating;
