@@ -53,4 +53,29 @@ public class MovieService {
         return streamingsFound;
     }
 
+    public Optional<Movie> update(Long movieId, Movie updateMovie){
+        Optional<Movie> optMovie = movieRepository.findById(movieId);
+
+        if(optMovie.isPresent()){
+
+            List<Category> optcategories = this.findCategories(updateMovie.getCategories());
+            List<Streaming> optStreaming = this.findStreamings((updateMovie.getStreamings()));
+
+            Movie movie = optMovie.get();
+            movie.setTitle(updateMovie.getTitle());
+            movie.setDescription(updateMovie.getDescription());
+            movie.setReleaseDate(updateMovie.getReleaseDate());
+            movie.setRating(updateMovie.getRating());
+
+            movie.getCategories().clear();
+            movie.setCategories(optcategories);
+            movie.getStreamings().clear();
+            movie.setStreamings(optStreaming);
+
+            movieRepository.save(movie);
+            return  Optional.of(movie);
+        }
+        return Optional.empty();
+    }
+
 }
