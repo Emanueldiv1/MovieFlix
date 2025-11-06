@@ -78,4 +78,13 @@ public class MovieService {
         return Optional.empty();
     }
 
+
+    public List<Movie> findByCategory(Long categoryId){
+        return movieRepository.findMovieByCategories(List.of(Category.builder().id(categoryId).build()));
+    }
+
+    public List<Movie> findByStreaming(Long streamingId){
+        return movieRepository.findMovieByStreamings(List.of(Streaming.builder().id(streamingId).build()));
+    }
+
 }
