@@ -2,14 +2,13 @@ package com.movieflix.movie.service;
 
 import com.movieflix.category.entity.Category;
 import com.movieflix.category.service.CategoryService;
+import com.movieflix.movie.controller.dtos.response.MovieResponse;
 import com.movieflix.movie.entity.Movie;
 import com.movieflix.movie.repository.MovieRepository;
 import com.movieflix.streaming.entity.Streaming;
 import com.movieflix.streaming.service.StreamingService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,6 +84,10 @@ public class MovieService {
 
     public List<Movie> findByStreaming(Long streamingId){
         return movieRepository.findMovieByStreamings(List.of(Streaming.builder().id(streamingId).build()));
+    }
+
+    public void deleteById(Long id){
+        movieRepository.deleteById(id);
     }
 
 }
