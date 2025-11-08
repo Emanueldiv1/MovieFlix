@@ -1,6 +1,7 @@
 package com.movieflix.user.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -21,6 +22,7 @@ public class User {
 
     @Column(nullable = false)
     @NotNull
+    @Email(message = "Por favor, insira um endereço de e-mail válido ")
     private String email;
 
     @Column(nullable = false)
