@@ -20,6 +20,7 @@ public class UserMapper {
 
     public static UserResponse toUserReponse(User user){
         return UserResponse.builder()
+                .id(user.getId())
                 .name(user.getName())
                 .email(user.getEmail())
                 .build();
