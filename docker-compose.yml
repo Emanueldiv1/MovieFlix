@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   postgres:
     image: postgres:latest
@@ -10,3 +9,9 @@ services:
     ports:
       - "5432:5432"
     restart: always
+    volumes:
+      - movieflix_data:/var/lib/postgresql/data
+
+volumes:
+  movieflix_data:
+
