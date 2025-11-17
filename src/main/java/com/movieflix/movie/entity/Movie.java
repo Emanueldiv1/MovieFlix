@@ -55,6 +55,4 @@ public class Movie {
     )
 
     private List<Streaming> streamings;
-
-
 }
