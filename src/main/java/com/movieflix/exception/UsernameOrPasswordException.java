@@ -1,8 +1,8 @@
 package com.movieflix.exception;
 
-public class UsernameOrPassworldException extends  RuntimeException{
+public class UsernameOrPasswordException extends  RuntimeException{
 
-    public UsernameOrPassworldException(String message) {
+    public UsernameOrPasswordException(String message) {
         super(message);
     }
 }
