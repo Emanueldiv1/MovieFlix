@@ -19,7 +19,7 @@ springdoc:
   api-docs:
     path: /api/api-docs
   swagger-ui:
-    path: swagger/index.html
+    path: /swagger/index.html
 
 
 movieflix:
